@@ -8,7 +8,7 @@
         <el-aside width="250px" class="aside">
           <el-menu
             active-text-color="#ffd04b"
-            background-color="#545c64"
+            background-color="#272822"
             class="el-menu-vertical-demo"
             default-active="1"
             text-color="#fff"
@@ -30,7 +30,7 @@
             </router-link>
           </el-menu>
         </el-aside>
-        <el-main>
+        <el-main class="main">
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -39,9 +39,10 @@
 </template>
 <script setup lang="ts">
   import RandExp from "randexp";
+  import { Position, MapLocation } from '@element-plus/icons-vue'
   const randexp = new RandExp(/.+/);
    console.log(randexp.gen());
-  import { Position, MapLocation } from '@element-plus/icons-vue'
+  
 </script>
 <style scoped lang="less">
 .common-layout{
@@ -53,7 +54,13 @@
   }
   .aside{
     height: calc(100vh - 60px);
-    background: #545c64;
+    background: #272822;
+    .el-menu-vertical-demo{
+      border-right: none;
+    }
+  }
+  .main{
+    padding:0;
   }
 }
 .logo {

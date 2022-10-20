@@ -20,7 +20,7 @@ onMounted(() => {
   })
   const buildingTileset = viewer.scene.primitives.add(Cesium.createOsmBuildings())
   viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(116.405419, 39.926666, 3000),
+    destination: Cesium.Cartesian3.fromDegrees(116.405419, 39.926666, 1000000),
     orientation: {
       heading: Cesium.Math.toRadians(0.0),
       pitch: Cesium.Math.toRadians(-25.0)
@@ -31,8 +31,8 @@ onMounted(() => {
 </script>
 <style scoped>
 #mainMap {
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  height: calc(100vh - 60px);
   background: #aabbcc;
 }
 </style>
