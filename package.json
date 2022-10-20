@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rollup/pluginutils": "^5.0.1",
     "cesium": "^1.98.1",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@types/cesium": "^1.70.0",
