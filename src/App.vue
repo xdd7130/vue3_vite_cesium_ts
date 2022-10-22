@@ -1,24 +1,67 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import Cesium from './components/Cesium.vue'
-</script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="common-layout">
+    <el-container>
+      <el-header class="header">Header</el-header>
+      <el-container>
+        <el-aside width="250px" class="aside">
+          <el-menu
+            active-text-color="#ffd04b"
+            background-color="#272822"
+            class="el-menu-vertical-demo"
+            default-active="1"
+            text-color="#fff"
+          >
+            <el-sub-menu index="1">
+              <template #title>
+                <el-icon><Position /></el-icon>
+                <span>VU3基础</span>
+              </template>
+              <router-link to="/">
+                <el-menu-item index="1-1">item one</el-menu-item>
+              </router-link>
+            </el-sub-menu>
+            <router-link to="/cesium">
+              <el-menu-item  index="2"> 
+                  <el-icon><MapLocation /></el-icon>
+                  <span>Cesium</span>
+              </el-menu-item>
+            </router-link>
+          </el-menu>
+        </el-aside>
+        <el-main class="main">
+          <router-view></router-view>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
-  <HelloWorld msg="Vite + Vue" />
-  <Cesium />
 </template>
-
-<style scoped>
+<script setup lang="ts">
+  import RandExp from "randexp";
+  import { Position, MapLocation } from '@element-plus/icons-vue'
+  const randexp = new RandExp(/.+/);
+   console.log(randexp.gen());
+  
+</script>
+<style scoped lang="less">
+.common-layout{
+  .header{
+    line-height: 60px;
+    background: #272822;
+    color: #fff;
+    font-size: 20px;
+  }
+  .aside{
+    height: calc(100vh - 60px);
+    background: #272822;
+    .el-menu-vertical-demo{
+      border-right: none;
+    }
+  }
+  .main{
+    padding:0;
+  }
+}
 .logo {
   height: 6em;
   padding: 1.5em;
