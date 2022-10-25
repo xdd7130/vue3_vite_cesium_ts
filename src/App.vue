@@ -21,7 +21,7 @@
                 <el-menu-item index="1-1">item one</el-menu-item>
               </router-link>
             </el-sub-menu>
-            <router-link to="/cesium">
+            <router-link to="/CesiumOverview">
               <el-menu-item  index="2"> 
                   <el-icon><MapLocation /></el-icon>
                   <span>Cesium</span>

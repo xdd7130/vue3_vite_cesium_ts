@@ -4,7 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 const routes = [
   { path: "/", component: HelloWorld },
-  { path: "/cesium", component: () => import("./components/Cesium.vue") }
+  { path: "/CesiumOverview", component: () => import("./components/CesiumOverview.vue") }
 ];
 
 const router = createRouter({
