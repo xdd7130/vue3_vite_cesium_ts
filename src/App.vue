@@ -14,19 +14,45 @@
           >
             <el-sub-menu index="1">
               <template #title>
-                <el-icon><Position /></el-icon>
-                <span>VU3基础</span>
+                
+                <el-icon><Document /></el-icon>
+                <span>Vue3 基础</span>
               </template>
               <router-link to="/">
                 <el-menu-item index="1-1">item one</el-menu-item>
               </router-link>
             </el-sub-menu>
-            <router-link to="/CesiumOverview">
+            <el-sub-menu index="2">
+              <template #title>
+                <el-icon><MapLocation /></el-icon>
+                <span>  Cesium</span>
+              </template>
+              <router-link to="/CesiumOverview">
+                <el-menu-item index="2-1"> 鹰眼图</el-menu-item>
+              </router-link>
+              <router-link to="/">
+                <el-menu-item index="2-2">item one</el-menu-item>
+              </router-link>
+            </el-sub-menu>
+            <el-sub-menu index="3">
+              <template #title>
+                <!-- <el-icon><MapLocation /></el-icon> -->
+                <el-icon><Aim /></el-icon>
+                <span>OpenLayers</span>
+              </template>
+              <router-link to="/CesiumOverview">
+                <el-menu-item index="3-1"> 鹰眼图</el-menu-item>
+              </router-link>
+              <router-link to="/">
+                <el-menu-item index="3-2">item one</el-menu-item>
+              </router-link>
+            </el-sub-menu>
+            <!-- <router-link to="/CesiumOverview">
               <el-menu-item  index="2"> 
                   <el-icon><MapLocation /></el-icon>
                   <span>Cesium</span>
               </el-menu-item>
-            </router-link>
+            </router-link> -->
           </el-menu>
         </el-aside>
         <el-main class="main">
@@ -38,7 +64,7 @@
 </template>
 <script setup lang="ts">
   import RandExp from "randexp";
-  import { Position, MapLocation } from '@element-plus/icons-vue'
+  import { Position, MapLocation, Aim, Document } from '@element-plus/icons-vue'
   const randexp = new RandExp(/.+/);
    console.log(randexp.gen());
   
