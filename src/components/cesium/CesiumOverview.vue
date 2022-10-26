@@ -82,8 +82,12 @@ onMounted(() => {
   //     pitch: Cesium.Math.toRadians(-25.0)
   //   }
   // })
-  viewer.cesiumWidget.creditContainer.style.display = "none"
-  viewerEye.cesiumWidget.creditContainer.style.display = "none"
+  let viewerDom = viewer.cesiumWidget.creditContainer as HTMLElement
+  viewerDom.style.display = 'none'
+  let viewerEyeDom = viewerEye.cesiumWidget.creditContainer as HTMLElement
+  viewerEyeDom.style.display = 'none'
+  // viewer.cesiumWidget.creditContainer.style.display = "none"
+  // viewerEye.cesiumWidget.creditContainer.style.display = "none"
   /* let label = viewer.imageryLayers.addImageryProvider(
     new Cesium.WebMapTileServiceImageryProvider({
       url: "http://t0.tianditu.com/cia_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=cia&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default.jpg"+"&tk="+"19b72f6cde5c8b49cf21ea2bb4c5b21e",
