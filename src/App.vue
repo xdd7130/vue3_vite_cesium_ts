@@ -30,8 +30,11 @@
               <router-link to="/CesiumOverview">
                 <el-menu-item index="2-1"> 鹰眼图</el-menu-item>
               </router-link>
-              <router-link to="/">
-                <el-menu-item index="2-2">item one</el-menu-item>
+              <router-link to="/CesiumEntity">
+                <el-menu-item index="2-2">Entity添加形状</el-menu-item>
+              </router-link>
+              <router-link to="/Cesium3DTiles">
+                <el-menu-item index="2-3">加载3DTiles</el-menu-item>
               </router-link>
             </el-sub-menu>
             <el-sub-menu index="3">
@@ -44,7 +47,7 @@
                 <el-menu-item index="3-1"> 鹰眼图</el-menu-item>
               </router-link>
               <router-link to="/">
-                <el-menu-item index="3-2">item one</el-menu-item>
+                <el-menu-item index="3-2">aaa</el-menu-item>
               </router-link>
             </el-sub-menu>
             <!-- <router-link to="/CesiumOverview">
@@ -72,13 +75,13 @@
 <style scoped lang="less">
 .common-layout{
   .header{
-    line-height: 60px;
+    line-height: 45px;
     background: #272822;
     color: #fff;
     font-size: 20px;
   }
   .aside{
-    height: calc(100vh - 60px);
+    height: calc(100vh - 45px);
     background: #272822;
     .el-menu-vertical-demo{
       border-right: none;
