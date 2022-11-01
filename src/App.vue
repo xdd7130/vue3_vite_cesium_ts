@@ -36,6 +36,9 @@
               <router-link to="/Cesium3DTiles">
                 <el-menu-item index="2-3">加载3DTiles</el-menu-item>
               </router-link>
+              <router-link to="/CesiumRotate">
+                <el-menu-item index="2-4">旋转</el-menu-item>
+              </router-link>
             </el-sub-menu>
             <el-sub-menu index="3">
               <template #title>
