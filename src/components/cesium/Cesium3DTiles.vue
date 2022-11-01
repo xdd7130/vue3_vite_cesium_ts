@@ -170,8 +170,7 @@
       m = Cesium.Matrix4.fromTranslation(translation);
 
       let resultDom =  document.getElementById("result") as HTMLElement
-      viewerDom.style.display = 'none'
-     .innerText = "x:" + x.value + " y:" + y.value + " z:" + z.value;
+      resultDom.innerText = "x:" + x.value + " y:" + y.value + " z:" + z.value;
 
       tileset.modelMatrix = m;
   }
