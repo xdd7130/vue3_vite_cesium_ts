@@ -72,6 +72,8 @@
 		let m1 = Cesium.Matrix3.fromRotationZ(Cesium.Math.toRadians(anglez.value));   
 		tileset.modelMatrix = Cesium.Matrix4.multiplyByMatrix3(m, m1,new Cesium.Matrix4());
 	}
+
+	
 </script>
 <style scoped>
 #mainMap {
