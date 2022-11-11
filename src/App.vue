@@ -39,6 +39,9 @@
               <router-link to="/CesiumRotate">
                 <el-menu-item index="2-4">旋转</el-menu-item>
               </router-link>
+              <router-link to="/CesiumMeasure">
+                <el-menu-item index="2-5">测量</el-menu-item>
+              </router-link>
             </el-sub-menu>
             <el-sub-menu index="3">
               <template #title>
