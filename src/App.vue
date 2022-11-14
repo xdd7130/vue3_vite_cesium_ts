@@ -65,7 +65,11 @@
           </el-menu>
         </el-aside>
         <el-main class="main">
-          <router-view></router-view>
+          <router-view v-slot="{ Component }">
+            <keep-alive>
+              <component :is="Component" :key="$route.fullPath"/>
+            </keep-alive>
+          </router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -74,6 +78,7 @@
 <script setup lang="ts">
   import RandExp from "randexp";
   import { Position, MapLocation, Aim, Document } from '@element-plus/icons-vue'
+import HelloWorld from "./components/HelloWorld.vue";
   const randexp = new RandExp(/.+/);
    console.log(randexp.gen());
   
