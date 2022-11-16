@@ -16,10 +16,28 @@
               <template #title>
                 
                 <el-icon><Document /></el-icon>
-                <span>Vue3 基础</span>
+                <span>Vue3相关</span>
               </template>
               <router-link to="/">
-                <el-menu-item index="1-1">item one</el-menu-item>
+                <el-menu-item index="1-1">基础</el-menu-item>
+              </router-link>
+              <router-link to="/vue3-pass-value">
+                <el-menu-item index="1-2">传值</el-menu-item>
+              </router-link>
+              <router-link to="/vue3-slot">
+                <el-menu-item index="1-3">插值</el-menu-item>
+              </router-link>
+              <router-link to="/vue3-suspense">
+                <el-menu-item index="1-4">异步组件</el-menu-item>
+              </router-link>
+              <router-link to="/vue3-hooks">
+                <el-menu-item index="1-5">Hooks</el-menu-item>
+              </router-link>
+              <router-link to="/vue3-directive">
+                <el-menu-item index="1-6">自定义指令</el-menu-item>
+              </router-link>
+              <router-link to="/vue3-lifecycle">
+                <el-menu-item index="1-7">生命周期</el-menu-item>
               </router-link>
             </el-sub-menu>
             <el-sub-menu index="2">
@@ -64,7 +82,7 @@
             </router-link> -->
           </el-menu>
         </el-aside>
-        <el-main class="main">
+        <el-main class="main"  style="padding:10px;">
           <router-view v-slot="{ Component }">
             <keep-alive>
               <component :is="Component" :key="$route.fullPath"/>

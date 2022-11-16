@@ -24,6 +24,7 @@ export default defineConfig({
   ],
   resolve: {
     // 导入文件夹别名
+    extensions: [ ".ts", ".js", ".vue" ],
     alias: {
       '@': path.resolve(__dirname, './src'),
       views: path.resolve(__dirname, './src/views'),
@@ -34,6 +35,7 @@ export default defineConfig({
       com: path.resolve(__dirname, "./src/components"),
       store: path.resolve(__dirname, "./src/store"),
       mixins: path.resolve(__dirname, "./src/mixins")
-    },
+    }
   }
+  
 })
