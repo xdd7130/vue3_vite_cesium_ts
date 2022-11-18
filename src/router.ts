@@ -7,6 +7,9 @@ import Vue3Hooks from '@/components/vue3/Vue3Hooks.vue'
 import Vue3Directive from '@/components/vue3/Vue3Directive.vue'
 import Vue3LifeCycle from '@/components/vue3/Vue3LifeCycle.vue'
 
+import D3base from '@/components/d3/D3base.vue'
+
+
 const routes = [
   { path: "/", 
     component: Vue3Base ,
@@ -39,6 +42,10 @@ const routes = [
   { path: "/vue3-lifecycle", 
     component: Vue3LifeCycle ,
     name: Vue3LifeCycle
+  },
+  { path: "/d3-base", 
+    component: D3base ,
+    name: D3base
   },
   { path: "/CesiumOverview", component: () => import("./components/cesium/CesiumOverview.vue") },
   { path: "/CesiumEntity", component: () => import("./components/cesium/CesiumEntity.vue") },

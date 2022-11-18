@@ -74,12 +74,15 @@
                 <el-menu-item index="3-2">aaa</el-menu-item>
               </router-link>
             </el-sub-menu>
-            <!-- <router-link to="/CesiumOverview">
-              <el-menu-item  index="2"> 
-                  <el-icon><MapLocation /></el-icon>
-                  <span>Cesium</span>
-              </el-menu-item>
-            </router-link> -->
+            <el-sub-menu index="4">
+              <template #title>
+                <el-icon><Aim /></el-icon>
+                <span>D3</span>
+              </template>
+              <router-link to="/d3-base">
+                <el-menu-item index="4-1"> D3基础</el-menu-item>
+              </router-link>
+            </el-sub-menu>
           </el-menu>
         </el-aside>
         <el-main class="main"  style="padding:10px;">
@@ -96,7 +99,7 @@
 <script setup lang="ts">
   import RandExp from "randexp";
   import { Position, MapLocation, Aim, Document } from '@element-plus/icons-vue'
-import HelloWorld from "./components/HelloWorld.vue";
+  
   const randexp = new RandExp(/.+/);
    console.log(randexp.gen());
   

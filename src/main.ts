@@ -7,6 +7,7 @@ import 'element-plus/dist/index.css';
 import './style.css'
 import App from './App.vue'
 import Router from './router'
+
 createApp(App)
 .use(Router)
 .use(ElementPlus)
