@@ -79,8 +79,14 @@
                 <el-icon><Aim /></el-icon>
                 <span>D3</span>
               </template>
-              <router-link to="/d3-base">
-                <el-menu-item index="4-1"> D3基础</el-menu-item>
+              <router-link to="/d3-scaleAxes">
+                <el-menu-item index="4-1"> 坐标轴</el-menu-item>
+              </router-link>
+              <router-link to="/d3-transition">
+                <el-menu-item index="4-2"> 动画</el-menu-item>
+              </router-link>
+              <router-link to="/d3-scatter">
+                <el-menu-item index="4-3"> 点图</el-menu-item>
               </router-link>
             </el-sub-menu>
           </el-menu>

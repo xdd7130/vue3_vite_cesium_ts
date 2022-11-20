@@ -7,8 +7,9 @@ import Vue3Hooks from '@/components/vue3/Vue3Hooks.vue'
 import Vue3Directive from '@/components/vue3/Vue3Directive.vue'
 import Vue3LifeCycle from '@/components/vue3/Vue3LifeCycle.vue'
 
-import D3base from '@/components/d3/D3base.vue'
-
+import D3scaleAxes from '@/components/d3/D3scaleAxes.vue'
+import D3transition from '@/components/d3/D3transition.vue'
+import D3scatter from '@/components/d3/D3scatter.vue'
 
 const routes = [
   { path: "/", 
@@ -43,9 +44,17 @@ const routes = [
     component: Vue3LifeCycle ,
     name: Vue3LifeCycle
   },
-  { path: "/d3-base", 
-    component: D3base ,
-    name: D3base
+  { path: "/d3-scaleAxes", 
+    component: D3scaleAxes ,
+    name: D3scaleAxes
+  },
+  { path: "/d3-transition", 
+    component: D3transition ,
+    name: D3transition
+  },
+  { path: "/d3-scatter", 
+    component: D3scatter ,
+    name: D3scatter
   },
   { path: "/CesiumOverview", component: () => import("./components/cesium/CesiumOverview.vue") },
   { path: "/CesiumEntity", component: () => import("./components/cesium/CesiumEntity.vue") },
