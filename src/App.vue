@@ -88,6 +88,12 @@
               <router-link to="/d3-scatter">
                 <el-menu-item index="4-3"> 点图</el-menu-item>
               </router-link>
+              <router-link to="d3-svg">
+                <el-menu-item index="4-4"> SVG</el-menu-item>
+              </router-link>
+              <router-link to="d3-svg-vue">
+                <el-menu-item index="4-5"> SVG使用</el-menu-item>
+              </router-link>
             </el-sub-menu>
           </el-menu>
         </el-aside>
