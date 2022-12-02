@@ -1,26 +1,29 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import cesium from 'vite-plugin-cesium' // 引入插件
-// import styleImport from 'vite-plugin-style-import'
 import path from 'path'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), cesium(),
-    // styleImport({
-    //   libs: [
-    //     {
-    //       libraryName: 'element-plus',
-    //       esModule: true,
-    //       ensureStyleFile: true,
-    //       resolveStyle: (name) => {
-    //         return `element-plus/lib/theme-chalk/${name}.css`;
-    //       },
-    //       resolveComponent: (name) => {
-    //         return `element-plus/lib/${name}`;
-    //       },
-    //     }
-    //   ]
-    // })
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      // 指定symbolId格式
+      symbolId: 'icons-[name]',
+
+      /**
+       * 自定义插入位置
+       * @default: body-last
+       */
+      // inject?: 'body-last' | 'body-first'
+
+      /**
+       * custom dom id
+       * @default: __svg__icons__dom__
+       */
+      // customDomId: '__svg__icons__dom__',
+    })
   ],
   resolve: {
     // 导入文件夹别名
