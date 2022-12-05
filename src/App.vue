@@ -88,11 +88,26 @@
               <router-link to="/d3-scatter">
                 <el-menu-item index="4-3"> 点图</el-menu-item>
               </router-link>
-              <router-link to="d3-svg">
+              <router-link to="svg">
                 <el-menu-item index="4-4"> SVG</el-menu-item>
               </router-link>
-              <router-link to="d3-svg-vue">
-                <el-menu-item index="4-5"> SVG使用</el-menu-item>
+              <router-link to="svg-vue">
+                <el-menu-item index="4-5"> SVG再在vue中使用</el-menu-item>
+              </router-link>
+            </el-sub-menu>
+            <el-sub-menu index="5">
+              <template #title>
+                <el-icon><Aim /></el-icon>
+                <span>SVG</span>
+              </template>
+              <router-link to="svg">
+                <el-menu-item index="5-1"> SVG</el-menu-item>
+              </router-link>
+              <router-link to="svg-vue">
+                <el-menu-item index="5-2"> SVG再在vue中使用</el-menu-item>
+              </router-link>
+              <router-link to="svg-animation">
+                <el-menu-item index="5-2"> SVG动画</el-menu-item>
               </router-link>
             </el-sub-menu>
           </el-menu>

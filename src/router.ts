@@ -11,8 +11,9 @@ import D3scaleAxes from '@/components/d3/D3scaleAxes.vue'
 import D3transition from '@/components/d3/D3transition.vue'
 import D3scatter from '@/components/d3/D3scatter.vue'
 
-import D3Svg from '@/components/d3/Svg.vue'
-import D3SvgVue from '@/components/d3/SvgVue.vue'
+import Svg from '@/components/svg/Svg.vue'
+import SvgVue from '@/components/svg/SvgVue.vue'
+import SvgAnimation from '@/components/svg/SvgAnimation.vue'
 
 const routes = [
   { path: "/", 
@@ -60,15 +61,21 @@ const routes = [
     name: D3scatter
   },
   {
-    path: "/d3-svg", 
-    component: D3Svg ,
-    name: D3Svg
+    path: "/svg", 
+    component: Svg,
+    name: Svg
   },
   {
-    path: "/d3-svg-vue", 
-    component: D3SvgVue ,
-    name: D3SvgVue
+    path: "/svg-vue", 
+    component: SvgVue,
+    name: SvgVue
   },
+  {
+    path: "/svg-animation", 
+    component: SvgAnimation ,
+    name: SvgAnimation
+  },
+  
   { path: "/CesiumOverview", component: () => import("./components/cesium/CesiumOverview.vue") },
   { path: "/CesiumEntity", component: () => import("./components/cesium/CesiumEntity.vue") },
   { path: "/Cesium3DTiles", component: () => import("./components/cesium/Cesium3DTiles.vue") },

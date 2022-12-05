@@ -205,7 +205,35 @@
         <use xlink:href="#house" x="120" y="0" style="fill:#99f;" />
         <use xlink:href="#house" x="65" y="105" style="fill:#c00;" />
         <use xlink:href="#rect01" x="0" y="130" />
+    </svg>\
+    <svg width="50" height="50" stroke="black" background="green">
+        <path  d="
+            M73.8616812,68.8664775
+            L74.5015359,74.5939423
+            L68.1746283,71.7969507
+            C66.2299599,72.4159872 64.1377269,72.7711218 61.9444643,72.7711218
+            C51.9719158,72.7711218 43.8883163,65.7823167 43.8883163,57.1611168
+            C43.8883163,48.5399169 51.9719158,41.5511118 61.9444643,41.5511118
+            C71.9164005,41.5511118 80,48.5399169 80,57.1611168
+            C80,61.8286883 77.6181486,66.006419 73.8616812,68.8664775" id="Fill-1" fill="#FFFFFF"></path>
+
     </svg>
+    <h3>symbol + use的组合，来实现svg雪碧图</h3>
+    <h4>symbol、g、defs、use使用</h4>
+    
+    <ul>
+        <li>g 是group（分组）的缩写。g元素通常用来对相关图形元素进行分组，以便统一操作，比如旋转，缩放或者添加相关样式等。</li>
+        <li>defs 重用已存储元素, 分组定义的内容直接会显示，所以defs在使用的时候会有更大的灵活性; use 用的是这些 tag 的 id，而非 defs;defs 是个声明块，声明块本身没啥重用意义，其内定义可被重用的内容集合，重用的是该集合中的一项或多项，原样的拿过来在不同位置下呈现</li>
+        <li>symbol 兼具g的分组功能和defs初始不可见的特性,能够创建自己的视窗,symbol 可以设定 width height</li>
+        <li>use 重用;xlink:href, 实现SVG现有图形的重用，可以重用单个SVG图形元素，也可以重用g定义的组元素</li>
+    </ul>
+    <svg class="svg-sprite">
+        <symbol id="icon-wave_add" viewBox="0 0 76 76"><path d="M38 0a4 4 0 014 4v30h30a4 4 0 110 8H41.999L42 72a4 4 0 11-8 0l-.001-30H4a4 4 0 110-8h30V4a4 4 0 014-4z" fill="currentColor" fill-rule="evenodd" opacity="none"></path></symbol>
+        <symbol id="icon-time" viewBox="0 0 10 10"><path d="M5 0a5 5 0 110 10A5 5 0 015 0zm0 1.5a.5.5 0 00-.5.5v3.02l.008.088a.5.5 0 00.238.343L7.02 6.794l.082.039a.5.5 0 00.603-.215l.039-.082a.5.5 0 00-.216-.603L5.5 4.735V2l-.008-.09A.5.5 0 005 1.5z" fill="rgba(153,153,153,1)" fill-rule="evenodd" class=" "></path></symbol>
+        <symbol id="icon-wave_delete" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle fill="#000" opacity="0.2" cx="20" cy="20" r="20"></circle><path stroke="#FFF" stroke-width="4" stroke-linecap="round" d="M13 13l14 14M27 13L13 27"></path></g></symbol>
+        <use xlink:href="#icon-time"></use>
+    </svg>
+    
 </template>
 <script lang="ts" setup>
 import { onMounted } from 'vue'
