@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG - 动画</title>
+</head>
+<body>
+  <svg width="500" height="500">
+    <rect id="svg" x="0" y="0" width="100" height="100" fill="#ff770f"/>
+  </svg>
+
+  
+</body>
+<script>
+  const svgEl = document.getElementById('svg')
+  let x=0, y=0, add=true
+  setInterval(()=>{
+    x+=1
+    if(y<150 && add){
+      y+=1
+    } else {
+      add=false
+
+      y-=1
+    }
+    console.log(`x: ${x}, y: ${y}`)
+    svgEl.setAttribute('transform', `translate(${x}, ${y})`)
+  }, 10)
+</script>
+</html>

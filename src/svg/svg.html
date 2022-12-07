@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    形状
+    <!-- 内嵌html -->
+    <svg width="200px" height="200px" fill="red" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="50" ></circle>
+    </svg>
+    <!-- 背景图 -->
+    <div class="svg_bg_img"></div>
+    <!-- img标签引入 -->
+    <img src="./circle.svg" width="100" height="100"/>
 </body>
+<style>
+    .svg_bg_img {
+        width: 100px;
+        height: 100px;
+        background: url('./circle.svg') no-repeat;
+        background-size: 100px 100px;
+    }
+</style>
 </html>
