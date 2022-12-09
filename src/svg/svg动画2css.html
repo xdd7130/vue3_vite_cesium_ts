@@ -16,7 +16,7 @@
     margin: 50px auto;
   }
   #line {
-    stroke-dasharray: 500;
+    stroke-dasharray: 500; /* stroke-dasharray属性可以定义轮廓为虚线, stroke-dashoffset 属性用于指定路径开始的距离 */
     stroke-dashoffset: 500;
     animation: animation 2s linear infinite;
   }
@@ -36,31 +36,30 @@
       top: 50%;
       transform: translateY(-50%);
       width: 320px;
-    }
+  }
 
-    .rect {
-      fill: transparent;
+  .rect {
+    fill: transparent;
+    stroke-dasharray: 200 540;
+    stroke-dashoffset: -445;
+    stroke-width: 8px;
+  }
+  @keyframes draw {
+    0% {
       stroke-dasharray: 200 540;
       stroke-dashoffset: -445;
       stroke-width: 8px;
     }
-    @keyframes draw {
-      0% {
-        stroke-dasharray: 200 540;
-        stroke-dashoffset: -445;
-        stroke-width: 8px;
-      }
-      100% {
-        stroke-dasharray: 760;
-        stroke-dashoffset: 0;
-        stroke-width: 2px;
-      }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
     }
+  }
 
-    .svg-wrapper:hover .rect {
-      -webkit-animation: 0.5s draw linear forwards;
-      animation: 0.5s draw linear forwards;
-    }
+  .svg-wrapper:hover .rect {
+    animation: draw 0.5s  linear forwards;
+  }
 </style>
 </head>
 <body>
