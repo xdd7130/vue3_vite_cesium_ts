@@ -119,12 +119,12 @@
 </template>
 <script lang="ts" setup>
 import { onMounted } from 'vue'
-const svg = document.getElementById('svg')
-svg.onmouseout = e => svg.unpauseAnimations();
-svg.onmouseover = e => svg.pauseAnimations();
-const ani =  document.getElementById('ani')
-b1.onclick = e => ani.beginElement();
-b2.onclick = e => ani.endElement();
+// const svg = document.getElementById('svg')
+// svg.onmouseout = e => svg.unpauseAnimations();
+// svg.onmouseover = e => svg.pauseAnimations();
+// const ani =  document.getElementById('ani')
+// b1.onclick = e => ani.beginElement();
+// b2.onclick = e => ani.endElement();
 onMounted(()=>{
 
 

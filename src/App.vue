@@ -110,6 +110,15 @@
                 <el-menu-item index="5-2"> SVG动画</el-menu-item>
               </router-link>
             </el-sub-menu>
+            <el-sub-menu index="6">
+              <template #title>
+                <el-icon><Aim /></el-icon>
+                <span>练习</span>
+              </template>
+              <router-link to="/practice-sort-algorithm">
+                <el-menu-item index="6-1"> 排序</el-menu-item>
+              </router-link>
+            </el-sub-menu>
           </el-menu>
         </el-aside>
         <el-main class="main"  style="padding:10px;">

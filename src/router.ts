@@ -15,10 +15,12 @@ import Svg from '@/components/svg/Svg.vue'
 import SvgVue from '@/components/svg/SvgVue.vue'
 import SvgAnimation from '@/components/svg/SvgAnimation.vue'
 
+import SortAlgorithm from '@/components/practice/sortAlgorithm.vue'
+
 const routes = [
   { path: "/", 
     component: Vue3Base ,
-    name: Vue3Base,
+    name: 'Vue3Base',
     meta: {
       deepth: 1,
       keepAlive: true, //需要被缓存
@@ -26,11 +28,11 @@ const routes = [
   },
   { path: "/vue3-pass-value", 
     component: Vue3PassValue ,
-    name: Vue3PassValue
+    name: 'Vue3PassValue'
   },
   { path: "/vue3-slot", 
     component: Vue3Slot ,
-    name: Vue3Slot
+    name: 'Vue3Slot'
   },
   { path: "/vue3-suspense", 
     component: Vue3Suspense ,
@@ -38,42 +40,42 @@ const routes = [
   },
   { path: "/vue3-hooks", 
     component: Vue3Hooks ,
-    name: Vue3Hooks
+    name: 'Vue3Hooks'
   },
   { path: "/vue3-directive", 
     component: Vue3Directive ,
-    name: Vue3Directive
+    name: 'Vue3Directive'
   },
   { path: "/vue3-lifecycle", 
     component: Vue3LifeCycle ,
-    name: Vue3LifeCycle
+    name: 'Vue3LifeCycle'
   },
   { path: "/d3-scaleAxes", 
     component: D3scaleAxes ,
-    name: D3scaleAxes
+    name: 'D3scaleAxes'
   },
   { path: "/d3-transition", 
     component: D3transition ,
-    name: D3transition
+    name: 'D3transition'
   },
   { path: "/d3-scatter",
     component: D3scatter ,
-    name: D3scatter
+    name: 'D3scatter'
   },
   {
     path: "/svg", 
     component: Svg,
-    name: Svg
+    name: 'Svg'
   },
   {
     path: "/svg-vue", 
     component: SvgVue,
-    name: SvgVue
+    name: 'SvgVue'
   },
   {
     path: "/svg-animation", 
     component: SvgAnimation ,
-    name: SvgAnimation
+    name: 'SvgAnimation'
   },
   
   { path: "/CesiumOverview", component: () => import("./components/cesium/CesiumOverview.vue") },
@@ -81,6 +83,7 @@ const routes = [
   { path: "/Cesium3DTiles", component: () => import("./components/cesium/Cesium3DTiles.vue") },
   { path: "/CesiumRotate", component: () => import("./components/cesium/CesiumRotate.vue") },
   { path: "/CesiumMeasure", component: () => import("./components/cesium/CesiumMeasure.vue") },
+  { path: "/practice-sort-algorithm", component: SortAlgorithm, name: 'SortAlgorithm' },
 ];
 
 const router = createRouter({

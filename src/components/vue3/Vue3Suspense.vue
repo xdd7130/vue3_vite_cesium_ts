@@ -36,6 +36,13 @@ import {
   Star,
 } from '@element-plus/icons-vue'
 import { ref, defineAsyncComponent} from 'vue'
+enum Color {
+  RED = "红色",
+  PINK = "粉色",
+  BLUE = "蓝色",
+}
+const red: Color = Color.RED;
+console.log(red); // 0
 const Vue3SuspenseChild = defineAsyncComponent(() => import('./Vue3SuspenseChild.vue'))
 
 const funList = ref(['Suspense',' defineAsyncComponent', 'slot:default', 'v-slot:fallback'])
