@@ -41,7 +41,15 @@ import {
   const num = ref(1)
   const changNum = () => {
     num.value += 1
+    localStorage.setItem('task', 'false')
   }
+  localStorage.setItem('task', 'true')
+  window.addEventListener('storage', (event) => {
+    if(event.key === 'task' && event.newValue === 'false') {
+      localStorage.setItem('task', 'true')
+    }
+      console.log(event)
+    })
   onBeforeMount(() => {
     console.log('生命周期：onBeforeMount实例挂载前')
   })
