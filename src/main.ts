@@ -4,6 +4,7 @@ import 'element-plus/dist/index.css';
 import 'virtual:svg-icons-register';
 
 import './style.css'
+import './style/page.less'
 import App from './App.vue'
 import Router from './router'
 import SvgIcon from '@/components/SvgIcon.vue'

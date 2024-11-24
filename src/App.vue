@@ -144,6 +144,7 @@
 .common-layout{
   .header{
     line-height: 45px;
+    height:45px;
     background: #272822;
     color: #fff;
     font-size: 20px;
@@ -157,6 +158,7 @@
   }
   .main{
     padding:0;
+    height: calc(100vh - 45px);
   }
 }
 .logo {

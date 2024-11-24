@@ -11,6 +11,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "@rollup/pluginutils": "^5.0.1",
+    "@types/d3": "^7.4.3",
     "cesium": "^1.98.1",
     "d3": "^7.6.1",
     "element-plus": "^2.2.18",
