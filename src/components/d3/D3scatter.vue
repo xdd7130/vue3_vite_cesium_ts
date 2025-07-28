@@ -7,7 +7,7 @@
   <svg width="950" height="800" id="mainsvg" class="svgs" style="background-color: #ffffff;display: block; margin: 0 auto;"></svg>
 
 </template>
-<script lang="ts" setup>
+<script setup>
 import { ref, onMounted } from 'vue'
 import * as d3 from 'd3'
 

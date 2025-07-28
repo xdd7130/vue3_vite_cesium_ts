@@ -9,7 +9,7 @@
     <svg width="500" height="400" id="mainsvg" class="svgs" style="display: block; margin: 0 auto;"></svg>
 
 </template>
-<script lang="ts" setup>
+<script  setup>
 import { ref, onMounted } from 'vue'
 import * as d3 from 'd3'
 
@@ -58,6 +58,8 @@ onMounted(()=>{
 
         const svg = d3.select('#mainsvg');
         const width = +svg.attr('width');
+        console.log(svg.attr('width'))
+        debugger
         const height = +svg.attr('height');
         const margin = {top: 50, right: 50, bottom: 50, left: 50};
         const innerWidth = width - margin.left - margin.right;
@@ -67,7 +69,7 @@ onMounted(()=>{
         .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
         const xScale = d3.scaleLinear()
-        .domain([0, d3.max(data, datum=>datum.value)])
+        .domain([0, d3.max(data, (datum)=>datum.value)])
         .range([0, innerWidth]); 
 
         const yScale = d3.scaleBand()
