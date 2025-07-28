@@ -1,3 +1,13 @@
+/*
+ * @Author: 解丹丹 xiedandan@hikvision.com.cn
+ * @Date: 2024-09-20 19:40:56
+ * @LastEditors: 解丹丹 xiedandan@hikvision.com.cn
+ * @LastEditTime: 2025-07-28 19:54:50
+ * @FilePath: \vue3_vite_cesium_ts\src\router.ts
+ * @Description: 
+ * 
+ * Copyright (c) 2025, All Rights Reserved. 
+ */
 import { createRouter, createWebHistory } from "vue-router";
 import Vue3Base from "@/components/vue3/Vue3Base.vue";
 import Vue3PassValue from '@/components/vue3/Vue3PassValue.vue'
@@ -17,6 +27,9 @@ import SvgAnimation from '@/components/svg/SvgAnimation.vue'
 
 import SortAlgorithm from '@/components/practice/sortAlgorithm.vue'
 
+
+import sceneCameraRender from '@/components/three/sceneCameraRender.vue'
+import { KeepAlive } from "vue";
 const routes = [
   { path: "/", 
     component: Vue3Base ,
@@ -84,6 +97,7 @@ const routes = [
   { path: "/CesiumRotate", component: () => import("./components/cesium/CesiumRotate.vue") },
   { path: "/CesiumMeasure", component: () => import("./components/cesium/CesiumMeasure.vue") },
   { path: "/practice-sort-algorithm", component: SortAlgorithm, name: 'SortAlgorithm' },
+  { path: "/scene-camera-render", component: sceneCameraRender, name: 'sceneCameraRender' }
 ];
 
 const router = createRouter({

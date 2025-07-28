@@ -4,17 +4,15 @@
     <el-container>
       <el-header class="header">Header</el-header>
       <el-container>
-        <el-aside width="250px" class="aside">
+        <el-aside width="220px" class="aside">
           <el-menu
-            active-text-color="#ffd04b"
-            background-color="#272822"
+            
             class="el-menu-vertical-demo"
             default-active="1"
-            text-color="#fff"
+            
           >
             <el-sub-menu index="1">
               <template #title>
-                
                 <el-icon><Document /></el-icon>
                 <span>Vue3相关</span>
               </template>
@@ -119,13 +117,22 @@
                 <el-menu-item index="6-1"> 排序</el-menu-item>
               </router-link>
             </el-sub-menu>
+            <el-sub-menu index="7">
+              <template #title>
+                <el-icon><Aim /></el-icon>
+                <span>three</span>
+              </template>
+              <router-link to="/scene-camera-render">
+                <el-menu-item index="7-1">场景，相机和渲染器</el-menu-item>
+              </router-link>
+            </el-sub-menu>
           </el-menu>
         </el-aside>
         <el-main class="main"  style="padding:10px;">
           <router-view v-slot="{ Component }">
-            <keep-alive>
+            <!-- <keep-alive> -->
               <component :is="Component" :key="$route.fullPath"/>
-            </keep-alive>
+            <!-- </keep-alive> -->
           </router-view>
         </el-main>
       </el-container>
@@ -143,20 +150,23 @@
 <style scoped lang="less">
 .common-layout{
   .header{
-    line-height: 45px;
-    background: #272822;
+    line-height: 60px;
+    background: #0f62fe;
     color: #fff;
     font-size: 20px;
   }
   .aside{
-    height: calc(100vh - 45px);
-    background: #272822;
+    height: calc(100vh - 60px);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .1);
     .el-menu-vertical-demo{
       border-right: none;
     }
   }
   .main{
-    padding:0;
+    padding: 0 !important;
+  }
+  .el-container {
+    height: calc(100vh - 60px);
   }
 }
 .logo {
